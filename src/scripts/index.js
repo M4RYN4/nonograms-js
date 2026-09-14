@@ -60,7 +60,7 @@ document.getElementById('body').innerHTML = `<div class="wrap theme">
  <div id="win-modal" class="modal-overlay hidden">
    <div class="modal-box">
      <h2 class="modal-title">Puzzle Solved!</h2>
-     <p class="modal-message">You solved the nonogram in <span id="modal-time">0</span> seconds!</p>
+     <p class="modal-message">You solved the nonogram in <span id="modal-time">0</span></p>
      <div class="modal-buttons">
        <button id="btn-modal-new-game" class="modal-btn primary">New Game</button>
       <button id="btn-modal-close" class="modal-btn">Close</button>
@@ -991,7 +991,7 @@ function isVictory() {
   setTimeout(() => {
     // alert(`Great! You have solved the nonogram in ${+mins*60 + +secs} seconds!`);
     stopTimer();
-    showWinModal(+mins * 60 + +secs);
+    showWinModal(timeDisplay.textContent);
     startNewGame();
   }, "500");
 }
